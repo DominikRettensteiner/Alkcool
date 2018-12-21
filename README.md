@@ -1,2 +1,2 @@
 # Alkcool
-56 Kräuter werden die helfen.
+56 Kräuter werden dir helfen.
