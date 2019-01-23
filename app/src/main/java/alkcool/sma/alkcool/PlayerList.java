@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class PlayerList {
-    public static ArrayList<Player> list;
+    public static ArrayList<Player> list= new ArrayList<Player>();
 
     public PlayerList(){
-        list = new ArrayList<Player>();
     }
 
-    public void sort(){
+    public static void sort(){
         Collections.sort(list);
     }
 

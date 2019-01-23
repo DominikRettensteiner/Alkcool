@@ -1,5 +1,7 @@
 package alkcool.sma.alkcool;
 
+import java.util.Random;
+
 public class Player implements Comparable{
     public String playerName;
     public int points;

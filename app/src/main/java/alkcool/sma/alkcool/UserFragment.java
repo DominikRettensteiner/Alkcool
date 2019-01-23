@@ -77,6 +77,9 @@ public class UserFragment extends Fragment{
         String name = playerName.getText().toString();
         playerName.setText("");
         if((!name.equals("")) && (!AllPlayers.contains(name)) && (name.trim().length() > 0)){
+            if(name.length() > 10){
+                name = name.substring(0, 9);
+            }
             Player player = new Player(name);
             AllPlayers.list.add(player);
             UpdateList();
