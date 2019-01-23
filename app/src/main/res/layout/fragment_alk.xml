@@ -5,10 +5,50 @@
     android:layout_height="match_parent"
     tools:context=".AlkFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="alk" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/alkName"
+                android:layout_width="165dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Getränkename"
+                android:inputType="textPersonName"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/alkPercent"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Alk.%"
+                android:textSize="30dp"
+                android:inputType="numberDecimal"/>
+
+            <Button
+                android:id="@+id/addAlkButton"
+                android:layout_width="65dp"
+                android:layout_height="70dp"
+                android:textSize="30dp"
+                android:text="+"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/alkList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 </FrameLayout>

@@ -1,17 +1,17 @@
 package alkcool.sma.alkcool;
 
-public class Alk implements Comparable{
-    public String alkName;
-    public double percent;
+public class Amount implements Comparable{
+    public String AmountName;
+    public int milliliter;
 
-    public Alk(String name, double p){
-        alkName = name;
-        percent = p;
+    public Amount(String name, int ml){
+        AmountName = name;
+        milliliter = ml;
     }
 
     @Override
     public int compareTo(Object o) {
-        Alk a = (Alk)o;
-        return alkName.compareTo(a.alkName);
+        Amount a = (Amount)o;
+        return milliliter - a.milliliter;
     }
 }

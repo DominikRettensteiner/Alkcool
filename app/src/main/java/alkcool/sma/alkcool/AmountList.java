@@ -3,21 +3,17 @@ package alkcool.sma.alkcool;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class AlkList {
-    public static ArrayList<Alk> list= new ArrayList<Alk>();
+public class AmountList {
+    public static ArrayList<Amount> list= new ArrayList<Amount>();
 
-    public AlkList(){
+    public AmountList(){
         if(list.isEmpty()){
-            list.add(new Alk("Bier", 5.0));
-            list.add(new Alk("Wein", 12.0));
-            list.add(new Alk("Spritzer", 6.0));
-            list.add(new Alk("Most", 7));
-            list.add(new Alk("gespritzter Most", 3.5));
-            list.add(new Alk("Jägermeister", 35));
-            list.add(new Alk("Wodka", 37.5));
-            list.add(new Alk("Rum", 38));
-            list.add(new Alk("Rum", 80));
-            list.add(new Alk("Tequila", 38));
+            list.add(new Amount("A Hoibe", 500));
+            list.add(new Amount("A Seidl", 330));
+            list.add(new Amount("A Viertl", 250));
+            list.add(new Amount("A Achterl", 125));
+            list.add(new Amount("A Dopplts", 40));
+            list.add(new Amount("A Stamperl", 20));
         }
     }
 
@@ -25,21 +21,10 @@ public class AlkList {
         Collections.sort(list);
     }
 
-    public boolean contains(String name, double percent){
-        for(Alk a : list){
-            if(a.alkName.equals(name)){
-                if(a.percent == percent){
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     public static ArrayList<String> getStringList(){
         ArrayList<String> newList = new ArrayList<String>();
-        for(Alk a : list){
-            newList.add(a.alkName+"("+a.percent+"%)");
+        for(Amount a : list){
+            newList.add(a.AmountName+"("+a.milliliter+"ml)");
         }
         return newList;
     }

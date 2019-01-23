@@ -37,7 +37,7 @@
         </TableRow>
 
         <ScrollView android:layout_height="match_parent"
-                    android:layout_marginTop="10px">
+                    android:layout_marginTop="50px">
 
             <TableLayout
                 android:id="@+id/rankingTable"
