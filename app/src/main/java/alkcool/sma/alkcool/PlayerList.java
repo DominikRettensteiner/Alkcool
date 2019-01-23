@@ -29,4 +29,17 @@ public class PlayerList {
         }
         return false;
     }
+
+    public int addPoints(String playerName, String amountName, Alk alk){
+        Amount amount = AmountList.getByName(amountName);
+        Player player = null;
+        for(Player p : list){
+            if(p.playerName == playerName){
+                player = p;
+            }
+        }
+        int p = ((int)(amount.milliliter * alk.percent / 100));
+        player.points = player.points + p;
+        return p;
+    }
 }

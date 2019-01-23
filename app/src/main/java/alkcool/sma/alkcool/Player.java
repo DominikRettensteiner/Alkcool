@@ -14,6 +14,6 @@ public class Player implements Comparable{
     @Override
     public int compareTo(Object o) {
         Player p = (Player)o;
-        return this.points - p.points;
+        return p.points - this.points;
     }
 }

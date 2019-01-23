@@ -1,14 +1,7 @@
 package alkcool.sma.alkcool;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,12 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
-import java.util.List;
 
 public class UserFragment extends Fragment{
 
@@ -88,7 +75,7 @@ public class UserFragment extends Fragment{
 
     private void UpdateList(){
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, AllPlayers.getNameList());
+                R.layout.my_textview, AllPlayers.getNameList());
         playerList.setAdapter(adapter);
     }
 }

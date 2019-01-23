@@ -1,10 +1,13 @@
 package alkcool.sma.alkcool;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -18,7 +21,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-public class RankingFragment extends Fragment {
+public class RankingFragment extends Fragment{
 
     private TableLayout rankingTable;
     private PlayerList AllPlayers = new PlayerList();
@@ -33,6 +36,7 @@ public class RankingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //UpdateList(getView());
     }
 
     @Override
@@ -42,6 +46,21 @@ public class RankingFragment extends Fragment {
 
         rankingTable = (TableLayout) v.findViewById(R.id.rankingTable);
 
+        UpdateList(v);
+
+        return v;
+    }
+
+    @Override
+    public void setMenuVisibility(final boolean visible) {
+        super.setMenuVisibility(visible);
+        if (visible) {
+            UpdateList(getView());
+        }
+    }
+
+    public void UpdateList(View v){
+        rankingTable.removeAllViews();
         int i = 1;
         AllPlayers.sort();
         for(Player p : AllPlayers.list){
@@ -95,7 +114,5 @@ public class RankingFragment extends Fragment {
             }
             i++;
         }
-
-        return v;
     }
 }

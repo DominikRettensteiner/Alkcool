@@ -9,6 +9,7 @@ public class AlkList {
     public AlkList(){
         if(list.isEmpty()){
             list.add(new Alk("Bier", 5.0));
+            list.add(new Alk("Weizenbier", 6.0));
             list.add(new Alk("Wein", 12.0));
             list.add(new Alk("Spritzer", 6.0));
             list.add(new Alk("Most", 7));
@@ -18,6 +19,7 @@ public class AlkList {
             list.add(new Alk("Rum", 38));
             list.add(new Alk("Rum", 80));
             list.add(new Alk("Tequila", 38));
+            list.add(new Alk("Schnaps", 40));
         }
     }
 
