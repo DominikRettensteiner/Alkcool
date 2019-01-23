@@ -25,6 +25,7 @@ public class RankingFragment extends Fragment{
 
     private TableLayout rankingTable;
     private PlayerList AllPlayers = new PlayerList();
+    private boolean initialized = false;
 
     public RankingFragment() {
     }
@@ -60,7 +61,8 @@ public class RankingFragment extends Fragment{
     }
 
     public void UpdateList(View v){
-        rankingTable.removeAllViews();
+        if(initialized) rankingTable.removeAllViews();
+        initialized = true;
         int i = 1;
         AllPlayers.sort();
         for(Player p : AllPlayers.list){
