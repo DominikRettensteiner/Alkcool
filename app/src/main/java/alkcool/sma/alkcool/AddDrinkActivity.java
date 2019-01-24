@@ -77,7 +77,6 @@ public class AddDrinkActivity extends AppCompatActivity {
             builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(AddDrinkActivity.this, "OK gedrückt", Toast.LENGTH_SHORT).show();
                             int points = AllPlayers.addPoints(playerName, amountName, alk);
                             Toast.makeText(AddDrinkActivity.this, playerName + ": +"+points+" Punkte", Toast.LENGTH_LONG).show();
                             Toast.makeText(AddDrinkActivity.this, "Super " + playerName + ", starke Leistung!", Toast.LENGTH_LONG).show();
@@ -101,7 +100,6 @@ public class AddDrinkActivity extends AppCompatActivity {
             builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Toast.makeText(AddDrinkActivity.this, "OK gedrückt", Toast.LENGTH_SHORT).show();
                     int points = AllPlayers.addPoints(playerName, amountName, alk);
                     Toast.makeText(AddDrinkActivity.this, playerName + ": +"+points+" Punkte", Toast.LENGTH_LONG).show();
                     Toast.makeText(AddDrinkActivity.this, "Geh bitte " + playerName + ", schwache Leistung!", Toast.LENGTH_LONG).show();
