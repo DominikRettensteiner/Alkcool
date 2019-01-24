@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        static final int NUM_ITEMS = 3;
+        static final int NUM_ITEMS = 4;
         private final FragmentManager mFragmentManager;
         private Fragment mFragmentAtPos0;
 
@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     return AlkFragment.newInstance();
                 case 2:
+                    return MealFragment.newInstance();
+                case 3:
                     return RankingFragment.newInstance();
             }
             return null;
@@ -102,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 4 total pages.
+            return 4;
         }
     }
 

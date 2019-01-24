@@ -1,9 +1,12 @@
 package alkcool.sma.alkcool;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -18,6 +21,7 @@ import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -65,7 +69,7 @@ public class RankingFragment extends Fragment{
         initialized = true;
         int i = 1;
         AllPlayers.sort();
-        for(Player p : AllPlayers.list){
+        for(final Player p : AllPlayers.list){
             if(i<=10) {
                 TableRow tr = new TableRow(getActivity());
 
@@ -83,6 +87,15 @@ public class RankingFragment extends Fragment{
                 name.setWidth(360);
                 name.setTextAlignment(v.TEXT_ALIGNMENT_CENTER);
                 name.setTextColor(Color.rgb(0, 0, 0));
+
+                /*name.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        for(AlkAmount a : p.alkAmountList) {
+                            Toast.makeText(getActivity(), a.alk.alkName + " " + a.amount.AmountName + " " + a.anzahl, Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });*/
 
                 TextView score = new TextView(getActivity());
                 String s = Integer.toString(p.points);

@@ -23,6 +23,10 @@
             android:name=".AddDrinkActivity"
             android:label="@string/title_activity_add_drink"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddMealActivity"
+            android:label="@string/title_activity_add_meal"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
